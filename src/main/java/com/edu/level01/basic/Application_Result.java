@@ -35,6 +35,7 @@ public class Application_Result {
         System.out.print("의 차는 : ");
         System.out.println(cal.minusTwoNumber(e,f));
 
+        sc.close();
 
 
     }
