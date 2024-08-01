@@ -1,4 +1,4 @@
-package com.edu.level01.basic;
+package com.edu.chap03.level01.basic;
 
 import java.util.Scanner;
 

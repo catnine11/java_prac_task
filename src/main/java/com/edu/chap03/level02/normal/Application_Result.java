@@ -1,4 +1,4 @@
-package com.edu.level02.normal;
+package com.edu.chap03.level02.normal;
 
 public class Application_Result {
     public static void main(String[] args) {

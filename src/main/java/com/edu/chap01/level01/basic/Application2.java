@@ -1,4 +1,4 @@
-package com.edu.level01.basic;
+package com.edu.chap01.level01.basic;
 
 public class Application2 {
 
