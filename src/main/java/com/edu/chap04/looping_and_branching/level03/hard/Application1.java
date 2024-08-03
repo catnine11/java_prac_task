@@ -21,14 +21,26 @@ public class Application1 {
          * 소수다.
          * */
         Scanner sc = new Scanner(System.in);
-        System.out.print("2보다 큰 정수를 하나 입력하세요 : ");
-        int n = sc.nextInt();
         while (true) {  // 무한루프
-            if (n % 2 == 0) {
+            System.out.print("2보다 큰 정수를 하나 입력하세요 : ");
+            int n = sc.nextInt();
 
+            if (n > 2) {
+                boolean isPrime = true;
+                for (int i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                System.out.println(isPrime? "소수다.":"소수가 아니다.");
+
+                break;
+            }else{
+                System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
             }
 
         }
-
+        sc.close();
     }
 }
