@@ -40,24 +40,30 @@ public class Application2 {
 
         Scanner sc = new Scanner(System.in);
 
-        double bonus = 0;
-        if(revenue/10000 >= 5000){
-            bonus = 0.05;
-        } else if (revenue/10000 >= 3000) {
-            bonus = 0.03;
-        } else if (revenue/10000 >= 1000) {
-            bonus = 0.01;
-        } else{
-            bonus = 0;
-        }
-
         System.out.print("월 급여 입력 : ");
         int salary = sc.nextInt();
         System.out.print("매출액 입력 : ");
         int revenue = sc.nextInt();
 
+        int bonus = 0;
+        if(revenue/10000 >= 5000){
+            bonus = 5;
+        } else if (revenue/10000 >= 3000) {
+            bonus = 3;
+        } else if (revenue/10000 >= 1000) {
+            bonus = 1;
+        } else{
+            bonus = 0;
+        }
 
-
+        System.out.println("======================");
+        System.out.println("매출액 : " + revenue);
+        System.out.println("보너스율 : " + bonus + "%");
+        System.out.println("월 급여 : " + salary);
+        System.out.println("보너스 금액 : " + (int)(revenue * bonus));
+        System.out.println("======================");
+        System.out.print("총 급여 : " );
+        System.out.println(salary + revenue * bonus /100);
 
     }
 
