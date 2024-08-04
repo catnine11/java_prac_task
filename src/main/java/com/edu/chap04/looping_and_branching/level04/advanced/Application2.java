@@ -77,6 +77,6 @@ public class Application2 {
         }
         System.out.println("============================");
         System.out.printf("거스름돈 : %d원\n", amount - price);
-
+        sc.close();
     }
 }
