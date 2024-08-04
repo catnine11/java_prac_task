@@ -25,12 +25,15 @@ public class Application1 {
         char[] carr = str.toCharArray();
         System.out.print("검색할 문자를 입력하세요 : ");
         char ch = sc.next().charAt(0);
+        int cnt = 0;
 
         for(char c : carr){
-            System.out.print(c);
+            if(c == ch){
+                cnt++;
+            }
         }
 
-        System.out.println(str);
-        System.out.println(Arrays.toString(carr));
+        System.out.printf("입력하신 문자열 %s에서 찾으시는 문자 %s은 %d개 입니다.", str, ch, cnt);
+        sc.close();
     }
 }
