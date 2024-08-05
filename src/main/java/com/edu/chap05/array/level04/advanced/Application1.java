@@ -1,5 +1,7 @@
 package com.edu.chap05.array.level04.advanced;
 
+import java.util.Arrays;
+
 public class Application1 {
     public static void main(String[] args) {
         /* 로또번호 생성기
@@ -8,5 +10,15 @@ public class Application1 {
          * 오름차순 정렬하여 출력하세요.
          * Arrays.sort(배열) 메소드 활용하여 정렬 가능.
          * */
+        int[] lotto = new int[6];
+        int n;
+
+        for (int i : lotto){
+            n = (int) (Math.random() * 45) + 1;
+            lotto[i] = n;
+            System.out.print(lotto[i] + " ");
+        }
+
+        // 중복 구현 방지, 오름차순 정렬해야 함
     }
 }
