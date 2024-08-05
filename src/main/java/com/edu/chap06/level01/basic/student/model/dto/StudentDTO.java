@@ -1,4 +1,4 @@
-package com.edu.chap06.greedy.level01.basic.student.model.dto;
+package com.edu.chap06.level01.basic.student.model.dto;
 
 public class StudentDTO {
     private int grade;

@@ -1,4 +1,4 @@
-package com.edu.chap06.greedy.level02.normal.book.model.dto;
+package com.edu.chap06.level02.normal.book.model.dto;
 
 public class BookDTO {
     private String title;

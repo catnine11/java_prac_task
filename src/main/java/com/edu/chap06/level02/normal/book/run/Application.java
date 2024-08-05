@@ -1,6 +1,6 @@
-package com.edu.chap06.greedy.level02.normal.book.run;
+package com.edu.chap06.level02.normal.book.run;
 
-import com.edu.chap06.greedy.level02.normal.book.model.dto.BookDTO;
+import com.edu.chap06.level02.normal.book.model.dto.BookDTO;
 
 public class Application {
     public static void main(String[] args) {

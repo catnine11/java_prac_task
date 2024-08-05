@@ -1,6 +1,6 @@
-package com.edu.chap06.greedy.level01.basic.student.run;
+package com.edu.chap06.level01.basic.student.run;
 
-import com.edu.chap06.greedy.level01.basic.student.model.dto.StudentDTO;
+import com.edu.chap06.level01.basic.student.model.dto.StudentDTO;
 
 import java.util.Scanner;
 
