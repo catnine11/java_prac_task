@@ -14,7 +14,8 @@ public class Application2 {
      *
      * 문자열 입력 : hello world Hello everyone! 안녕하세요 반갑습니다
      *
-     * ----- 출력 예시 -----
+     * ----- 출력
+      예시 -----
      *
      * ===== 단어 빈도 =====
      * hello: 2
@@ -24,18 +25,46 @@ public class Application2 {
      */
 
         Scanner sc = new Scanner(System.in);
+        System.out.print("문자열 입력 : ");
         String input = sc.nextLine();
 
         String[] words = input.toLowerCase().split(" ");
-//        List list = List.of(Arrays.stream(words).distinct().toArray(String[]::new));
 
+        String mostFrequentWord = "";
+        int highFrequency = 0;
+        int[] cnts = new int[words.length];
 
-        int cnt = 0;
-        for(int i = 0; i<words.length; i++){
-            System.out.println(words[i]);
+        System.out.println("===== 단어 빈도 =====");
+        for(int i = 0; i < words.length; i++){
+//            System.out.println(words[i]);
+            if(words[i].isEmpty()){
+                continue;
+            }
+            int cnt = 0;
+            boolean isPrinted = false;
+
+            for(int j = 0; j < words.length; j++){
+                // 이미 있는 단어면 카운트
+                if(words[i].equals(words[j])){
+                    cnt++;
+                }
+                // 이미 출력된 단어인지 확인
+                if(j < i && words[i].equals(words[j])){
+                    isPrinted = true;
+                    break;
+                }
+            }
+            cnts[i] = cnt;
+            if(cnt > highFrequency){
+                highFrequency = cnt;
+                mostFrequentWord = words[i];
+            }
+            if(!isPrinted){
+                System.out.println(words[i] + ": " + cnts[i]);
+            }
+
         }
-
-
+        System.out.printf("가장 빈도 높은 단어 : %s (%d 번) ", mostFrequentWord, highFrequency);
 
     }
 
