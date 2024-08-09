@@ -11,14 +11,20 @@ public class Application1 {
          * Arrays.sort(배열) 메소드 활용하여 정렬 가능.
          * */
         int[] lotto = new int[6];
-        int n;
 
-        for (int i : lotto){
-            n = (int) (Math.random() * 45) + 1;
-            lotto[i] = n;
-            System.out.print(lotto[i] + " ");
+        for (int i = 0; i < lotto.length; i++){
+            lotto[i] = (int) (Math.random() * 45) + 1;
+//            System.out.print(lotto[i] + " ");
+
+            for (int j = 0; j < i; j++){
+                if(lotto[i] == lotto[j]){
+                    i--;
+                    break;
+                }
+            }
         }
+        Arrays.sort(lotto);
+        System.out.println(Arrays.toString(lotto));
 
-        // 중복 구현 방지, 오름차순 정렬해야 함
     }
 }
