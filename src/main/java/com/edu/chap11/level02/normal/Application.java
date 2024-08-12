@@ -28,16 +28,25 @@ public class Application {
                 fileNames[i] = br.readLine();
             }
 
-            System.out.println("병합 될 파일명 입력 : ");
+            System.out.print("병합 될 파일명 입력 : ");
             String resultName = br.readLine();
 
-            BufferedWriter bw = new BufferedWriter(new FileWriter(resultName));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/com/edu/chap11/level02/normal/"+resultName));
             for(String fileName : fileNames) {
-
+                try (BufferedReader file = new BufferedReader(new FileReader("src/main/java/com/edu/chap11/level02/normal/" + fileName))) {
+                    String line;
+                    while ((line = file.readLine()) != null) {
+                        bw.write(line);
+                        bw.newLine();
+                    }
+                }
             }
 
+            System.out.println("파일 병합이 완료 되었습니다.");
+            bw.close();
+            br.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("오류 : " + e.getMessage());
         }
 
     }
