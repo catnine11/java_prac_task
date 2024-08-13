@@ -17,13 +17,16 @@ public class Application4 {
                 break;
             }
 
-            id.add(input);
-            System.out.println("ID가 추가 되었습니다.");
+            if(id.contains(input)){
+                System.out.println("이미 등록 된 ID입니다.");
+            }else{
+                id.add(input);
+                System.out.println("ID가 추가 되었습니다.");
+            }
 
         }
-        System.out.print("모든 학생의 ID : [");
+        System.out.print("모든 학생의 ID : ");
         System.out.println(id);
-        System.out.println("]");
 
         sc.close();
 

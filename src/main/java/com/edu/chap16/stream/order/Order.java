@@ -1,4 +1,4 @@
-package com.edu.chap16.stream;
+package com.edu.chap16.stream.order;
 
 import java.util.List;
 
