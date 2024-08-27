@@ -1,5 +1,7 @@
 package com.edu.chap05.array.level04.advanced;
 
+import java.util.Arrays;
+
 public class Applicatoin2 {
     public static void main(String[] args) {
         /* 숫자 야구게임 만들기
@@ -27,5 +29,11 @@ public class Applicatoin2 {
          * 정답입니다.
          * */
 
+        int[] baseball = new int[4];
+        for (int i = 0; i < 4; i++) {
+            baseball[i] = (int) (Math.random() * 45) + 1;
+        }
+
+        System.out.println(Arrays.toString(baseball));
     }
 }
